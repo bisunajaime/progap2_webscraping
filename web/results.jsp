@@ -1,10 +1,8 @@
-<%@page import="com.ecommerce.solution.JSOUPBean"%>
 <%@page import="com.ecommerce.exception.InvestmentAmountException"%>
 <%@page import="com.ecommerce.exception.NameLengthException"%>
 <%@page import="com.ecommerce.exception.FundTypeException"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1" errorPage="errorpage.jsp"%>
-<%@ page import="com.ecommerce.solution.SolutionBean" %>
 <jsp:useBean id="bean" class="com.ecommerce.solution.SolutionBean"/>
 <jsp:useBean id="j" class="com.ecommerce.solution.JSOUPBean"/>
 <jsp:setProperty property="*" name="bean"/>
