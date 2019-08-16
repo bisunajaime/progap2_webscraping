@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="table table-responsive">
+        <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-6">
+                <table class="table table-hover">
+                    <thead>
+                        <th>Fund Name</th>
+                        <th>NAVPS</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Save & Learn Equity Fund</td>
+                            <td><%= soupBean.getNavps_salef()%></td>
+                        </tr>
+                        <tr>
+                            <td>Save & Learn Balanced Fund</td>
+                            <td><%= soupBean.getNavps_salbf()%></td>
+                        </tr>
+                        <tr>
+                            <td>Save & Learned Fixed Income Fund</td>
+                            <td><%= soupBean.getNavps_salfif()%></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6">
+                <table class="table table-hover">
+                    <thead>
+                        <th>Investment Amount</th>
+                        <th>Sales Load</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><%= soupBean.getInv_amt_row1()%></td>
+                            <td><%= soupBean.getSales_load_row1()%></td>
+                        </tr>
+                        <tr>
+                            <td><%= soupBean.getInv_amt_row2()%></td>
+                            <td><%= soupBean.getSales_load_row2()%></td>
+                        </tr>
+                        <tr>
+                            <td><%= soupBean.getInv_amt_row3()%></td>
+                            <td><%= soupBean.getSales_load_row3()%></td>
+                        </tr>
+                        <tr>
+                            <td><%= soupBean.getInv_amt_row4()%></td>
+                            <td><%= soupBean.getSales_load_row4()%></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

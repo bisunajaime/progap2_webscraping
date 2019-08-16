@@ -1,0 +1,58 @@
+/* body{
+	padding-top: 70px;
+  background-color: #FAFAFA;
+}
+
+footer {
+  background-color: #212121;
+  color: #FAFAFA;
+  font-size: 20px;
+}
+
+.padding {
+  padding: 10px 0px;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.img-padding{
+	width: 40%; margin: auto;padding-top: 15px;
+}
+
+label{
+	text-align: center;
+}
+
+img:hover{
+  background: url('img/cabbage.png') no-repeat;
+  transition: 0.5s;
+}
+
+table.responsive-table {
+  display: table;
+  required for table-layout to be used (not normally necessary; included for completeness)
+  table-layout: fixed;
+  this keeps your columns with fixed with exactly the right width
+  width: 100%;
+  table must have width set for fixed layout to work as expected
+  height: 100%;
+}
+
+.tableFixHead          { overflow-y: auto; height: 350px; }
+.tableFixHead thead th { position: sticky; top: 0; }
+
+Just common table stuff. Really.
+table  { border-collapse: collapse; width: 90%; }
+th, td { padding: 8px 16px; }
+th     { background:#eee; }
+.border{
+  padding: 10px;
+} */
