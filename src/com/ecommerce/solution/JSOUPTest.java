@@ -28,7 +28,16 @@ public class JSOUPTest {
 					//row 4 col 4
 					String inv_amt_row4 = data.select("tr.row-6.even>td.column-1").text();
 					String sales_load_row4 = data.select("tr.row-6.even>td.column-2").text();
+					
+					System.out.println(j.ConvertToInt(inv_amt_row1));
+					System.out.println(j.ConvertToInt2(inv_amt_row1));
+					
+					System.out.println(j.ConvertToInt(inv_amt_row2));
+					System.out.println(j.ConvertToInt2(inv_amt_row2));
+					
+					System.out.println(j.ConvertToInt(inv_amt_row3));
 					System.out.println(j.ConvertToInt2(inv_amt_row3));
+					
 					System.out.println(j.ConvertToDouble3(inv_amt_row4));
 					//System.out.println(j.ConvertToInt2(inv_amt_row4));
 				}

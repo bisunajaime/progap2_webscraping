@@ -6,7 +6,7 @@ import com.ecommerce.solution.JSOUPBean;
 
 public class SolutionBean {
 	private String investor_name;
-	private String mutual_fund_type;
+	private String investor_fund_type;
 	private double investment_amount;
 	private double net_amt_inv;
 	private double sales_load_amt;
@@ -20,7 +20,7 @@ public class SolutionBean {
 	public SolutionBean(String name, String type, double amount) {
 		setInvestor_name(name);
 		setInvestment_amount(amount);
-		setMutual_fund_type(type);
+		setInvestor_fund_type(type);
 	}
 	
 	public String getInvestor_name() {
@@ -31,12 +31,12 @@ public class SolutionBean {
 		this.investor_name = investor_name;
 	}
 
-	public String getMutual_fund_type() {
-		return mutual_fund_type.toUpperCase();
+	public String getInvestor_fund_type() {
+		return investor_fund_type.toUpperCase();
 	}
 
-	public void setMutual_fund_type(String mutual_fund_type) {
-		this.mutual_fund_type = mutual_fund_type;
+	public void setInvestor_fund_type(String investor_fund_type) {
+		this.investor_fund_type = investor_fund_type;
 	}
 
 	public double getInvestment_amount() {
@@ -60,7 +60,7 @@ public class SolutionBean {
 	}
 	
 	public double getTotal_shares_bought() {
-		return total_shares_bought;
+		return Math.ceil(total_shares_bought);
 	}
 
 	//Process Facade
@@ -92,12 +92,11 @@ public class SolutionBean {
 		
 		double row4_val1 = soupBean.ConvertToDouble3(soupBean.getInv_amt_row4());
 		
-		if (getMutual_fund_type().trim().toUpperCase() != null) {
-			switch (getMutual_fund_type().trim().toUpperCase()) {
+		if (getInvestor_fund_type().trim().toUpperCase() != null) {
+			switch (getInvestor_fund_type().trim().toUpperCase()) {
 			case "SALEF":
-					mutual_fund_type = "Save and Learn Equity Fund";
+					investor_fund_type = "Save and Learn Equity Fund";
 					navps = salef;
-					setMutual_fund_type(mutual_fund_type);
 					if (investment_amount >= row1_val1 && investment_amount <= row1_val2) {
 						sales_load_amt = (getInvestment_amount() * d);
 						net_amt_inv = getInvestment_amount() - sales_load_amt;
@@ -117,7 +116,7 @@ public class SolutionBean {
 					}
 				break;
 			case "SALBF":
-					mutual_fund_type = "Save and Learn Balanced Fund";
+					investor_fund_type = "Save and Learn Balanced Fund";
 					navps = salbf;
 					if (getInvestment_amount() >= row1_val1 && getInvestment_amount() <= row1_val2) {
 						sales_load_amt = (getInvestment_amount() * d);
@@ -138,7 +137,7 @@ public class SolutionBean {
 					}
 				break;
 			case "SALFIF":
-					mutual_fund_type = "Save and Learn Fixed Income Fund";
+					investor_fund_type = "Save and Learn Fixed Income Fund";
 					navps = salfif;
 					if (getInvestment_amount() >= row1_val1 && getInvestment_amount() <= row1_val2) {
 						sales_load_amt = (getInvestment_amount() * d);

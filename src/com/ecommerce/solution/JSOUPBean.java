@@ -1,5 +1,6 @@
 package com.ecommerce.solution;
 
+import org.jsoup.Connection;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -106,7 +107,10 @@ public class JSOUPBean {
 	private void RetrieveData() {
 		String url = "https://fami.com.ph/mutual-fund/save-learn-equity-fund/";
 		try {
-			Document document = Jsoup.connect(url).get();
+			// Document document = Jsoup.connect(url).timeout(10*2000).get();
+			Connection connection = Jsoup.connect(url);
+			connection.userAgent("Mozilla/5.0");
+			Document document = connection.get();
 			for(Element data : document.select("table.tablepress.tablepress-id-4")) {
 				if (data.select("tbody.row-hover").text().equals("")) {
 					continue;

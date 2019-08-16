@@ -13,9 +13,7 @@
 <body>
 <%@ include file="style/header.html" %>
   <div class="container">
-    <div class="jumbotron">
-      <h1 style="text-align: center; font-size: 2rem;">Mutual Fund Solution</h1>
-    </div>
+    <h1 style="padding: 50px 0px" class="text-center display-4" >Mutual Fund Solution</h1>
     <%
 	JSOUPBean soupBean = new JSOUPBean();
 	soupBean.JSOUPFacade();
@@ -73,7 +71,7 @@
         </div>
     </div>
 	
-	<button class="btn btn-outline-info btn-block" data-toggle="collapse" data-target="#demo">Check Investment</button><br>
+	<button class="btn btn-outline-primary btn-block" data-toggle="collapse" data-target="#demo">Check Investment</button><br>
 
 	<div id="demo" class="collapse">
 		<form action="results.jsp" method="post">
@@ -83,7 +81,14 @@
             <input class="form-control" type="text" name="investor_fund_type" required><br>
             <label><span class="fa fa-dollar"></span>&nbsp;Enter Investment Amount:</label>
             <input class="form-control" type='number' step=".01" name="investment_amount" required><br>
-            <button class="btn btn-success" type="submit">Submit</button>
+            <div class='row'>
+            	<div class='col-6'>
+            		<button class="btn btn-success btn-block" type="submit">Submit</button>
+            	</div>
+            	<div class='col-6'>
+            		<button class='btn btn-warning btn-block' type='reset'>Reset</button>
+            	</div>
+            </div>
 		</form>
 	</div>
   </div>
