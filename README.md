@@ -5,4 +5,5 @@ Code made with Java JSP that scrapes
 * SALEF
 * SALFIF
 * SALBF 
+
 data from https://fami.com.ph to calculate the Net Amount Invested and Total Shares Bought
